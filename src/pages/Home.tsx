@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-4 h-screen">
+    <div className="flex flex-col items-center justify-center p-4 h-screen gap-4">
       <Input type="text" value={youtubeURL} placeholder="YouTube URL" onChange={(e) => setYoutubeURL(e.target.value)} />
       <Button name="Save" onClick={handleSave} disabled={!youtubeURL.trim()} />
     </div>
