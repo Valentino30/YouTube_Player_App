@@ -3,16 +3,22 @@ import { useNavigate } from "react-router";
 
 import Input from "../components/Input";
 import Button from "../components/Button";
+import { isValidYouTubeUrl } from "../utils/utils";
 
 export default function Home() {
   const navigate = useNavigate();
   const [youtubeURL, setYoutubeURL] = useState("");
 
   const handleSave = () => {
-    setYoutubeURL("");
-    localStorage.setItem("playbackTime", "0");
-    localStorage.setItem("youtubeURL", youtubeURL);
-    navigate("/video");
+    const isValidUrl = isValidYouTubeUrl(youtubeURL);
+    if (isValidUrl) {
+      setYoutubeURL("");
+      localStorage.setItem("playbackTime", "0");
+      localStorage.setItem("youtubeURL", youtubeURL);
+      navigate("/video");
+    } else {
+      alert("Invalid YouTube URL");
+    }
   };
 
   return (
