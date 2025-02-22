@@ -1,10 +1,16 @@
+import { Routes, Route } from "react-router";
 import "./App.css";
+import GIF from "./pages/GIF";
+import Home from "./pages/Home";
+import Video from "./pages/Video";
 
 function App() {
   return (
-    <>
-      <h1>Youtube Player App</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/video" element={<Video />} />
+      <Route path="/gif" element={<GIF />} />
+    </Routes>
   );
 }
 
