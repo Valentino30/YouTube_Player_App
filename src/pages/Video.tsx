@@ -27,7 +27,7 @@ export default function Video() {
   };
 
   return (
-    <div className="flex flex-col gap-4 items-center">
+    <div className="flex flex-col items-center justify-center p-4 h-screen gap-4">
       <YouTubePlayer url={youtubeURL} playbackTime={playbackTime} onPlaybackTimeUpdate={handlePlaybackTimeUpdate} />
       <Button name="Edit" onClick={handleGoBack} />
     </div>
