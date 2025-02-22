@@ -1,4 +1,4 @@
-# YouYube Player App
+# YouTube Player App
 
 This is a simple React Typescript App bootstrapped with Vite using Tailwind CSS, React Router and React Hot Toast for styling, navigation and error handling.
 
