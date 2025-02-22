@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
 
 import Input from "../components/Input";
@@ -17,7 +18,7 @@ export default function Home() {
       localStorage.setItem("youtubeURL", youtubeURL);
       navigate("/video");
     } else {
-      alert("Invalid YouTube URL");
+      toast.error("Invalid YouTube URL");
     }
   };
 

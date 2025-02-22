@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { GiphyFetch } from "@giphy/js-fetch-api";
 
@@ -12,7 +13,7 @@ type RandomGiphy = {
 export default function RandomGiphy() {
   const [loadingGiphy, setLoadingGiphy] = useState(true);
   const [giphy, setGiphy] = useState<RandomGiphy | null>(null);
-  
+
   useEffect(() => {
     const giphyApiKey = import.meta.env.VITE_GIPHY_API_KEY;
     const gf = new GiphyFetch(giphyApiKey);
@@ -21,8 +22,8 @@ export default function RandomGiphy() {
         const { data: gifs } = await gf.trending({ limit: 1 });
         const trendiestGiphy = gifs[0];
         setGiphy(trendiestGiphy);
-      } catch (error) {
-        console.log({ error });
+      } catch {
+        toast.error("Opps! Could not load any giphy!");
       } finally {
         setLoadingGiphy(false);
       }
