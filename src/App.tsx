@@ -4,13 +4,14 @@ import "./App.css";
 import GIF from "./pages/GIF";
 import Home from "./pages/Home";
 import Video from "./pages/Video";
+import { routes } from "./consts/routes";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/video" element={<Video />} />
-      <Route path="/gif" element={<GIF />} />
+      <Route path={routes.Home.path} element={<Home />} />
+      <Route path={routes.Video.path} element={<Video />} />
+      <Route path={routes.GIF.path} element={<GIF />} />
     </Routes>
   );
 }
