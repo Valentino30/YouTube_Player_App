@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router";
+
 import "./App.css";
 import GIF from "./pages/GIF";
 import Home from "./pages/Home";
