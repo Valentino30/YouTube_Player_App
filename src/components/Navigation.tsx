@@ -9,7 +9,10 @@ export function NavigationMenu() {
     <nav className="fixed top-0 p-4 w-full">
       <ul className="flex justify-center gap-8">
         {Object.entries(routes).map(([_, route]) => (
-          <li className={`${isActive(route.path) ? "font-bold" : "text-gray-500 hover:text-gray-400"} `}>
+          <li
+            key={route.name}
+            className={`${isActive(route.path) ? "font-bold" : "text-gray-500 hover:text-gray-400"} `}
+          >
             <Link to={route.path}>{route.name}</Link>
           </li>
         ))}
