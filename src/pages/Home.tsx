@@ -6,17 +6,19 @@ import Button from "../components/Button";
 
 export default function Home() {
   const navigate = useNavigate();
-  const [value, setValue] = useState("");
+  const [youtubeURL, setYoutubeURL] = useState("");
 
   const handleSave = () => {
-    setValue("");
-    navigate("/video", { state: { youtubeURL: value } });
+    setYoutubeURL("");
+    localStorage.setItem("playbackTime", "0");
+    localStorage.setItem("youtubeURL", youtubeURL);
+    navigate("/video");
   };
 
   return (
     <div className="flex flex-col items-center justify-center p-4">
-      <Input type="text" value={value} placeholder="YouTube Video URL" onChange={(e) => setValue(e.target.value)} />
-      <Button name="Save" onClick={handleSave} disabled={!value.trim()} />
+      <Input type="text" value={youtubeURL} placeholder="YouTube URL" onChange={(e) => setYoutubeURL(e.target.value)} />
+      <Button name="Save" onClick={handleSave} disabled={!youtubeURL.trim()} />
     </div>
   );
 }
