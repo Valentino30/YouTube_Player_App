@@ -1,5 +1,9 @@
 import ReactPlayer from "react-player/youtube";
 
-export default function YouTubePlayer() {
-  return <ReactPlayer playing={true} muted={true} url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />;
+type YouTubePlayerProps = {
+  url: string;
+};
+
+export default function YouTubePlayer({ url }: YouTubePlayerProps) {
+  return <ReactPlayer playing={true} muted={true} url={url} />;
 }

@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function Home() {
+  const navigate = useNavigate();
   const [value, setValue] = useState("");
 
   const handleSave = () => {
-    alert(`Saved: ${value}`);
     setValue("");
+    navigate("/video", { state: { youtubeURL: value } });
   };
 
   return (
