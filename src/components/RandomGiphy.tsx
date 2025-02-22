@@ -31,9 +31,19 @@ export default function RandomGiphy() {
     fetchGiphy();
   }, []);
 
-  if (loadingGiphy) return <h1>Loading random giphy!</h1>;
+  if (loadingGiphy)
+    return (
+      <div className="flex items-center justify-center h-[432px] w-full">
+        <h2>Loading random giphy!</h2>
+      </div>
+    );
 
-  if (!giphy) return <h1>Oops! No giphy found!</h1>;
+  if (!giphy)
+    return (
+      <div className="flex items-center justify-center h-[432px] w-full">
+        <h2>Oops! No giphy found!</h2>
+      </div>
+    );
 
   return <img src={giphy.images.downsized.url} />;
 }
