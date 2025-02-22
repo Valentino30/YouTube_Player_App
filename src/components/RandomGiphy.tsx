@@ -41,7 +41,7 @@ export default function RandomGiphy() {
   if (!giphy)
     return (
       <div className="flex items-center justify-center h-[432px] w-full">
-        <h2>Oops! No giphy found!</h2>
+        <h2>Oops! No giphy found! 😬</h2>
       </div>
     );
 

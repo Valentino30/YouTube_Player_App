@@ -15,5 +15,5 @@ export default function YouTubePlayer({ url, playbackTime = 0, onPlaybackTimeUpd
     }
   };
 
-  return <ReactPlayer playing={true} muted={true} url={playbackUrl} onProgress={handleProgress} />;
+  return <ReactPlayer controls playing url={playbackUrl} onProgress={handleProgress} />;
 }

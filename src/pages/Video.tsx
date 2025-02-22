@@ -28,7 +28,13 @@ export default function Video() {
 
   return (
     <div className="flex flex-col items-center justify-center p-4 h-screen gap-4">
-      <YouTubePlayer url={youtubeURL} playbackTime={playbackTime} onPlaybackTimeUpdate={handlePlaybackTimeUpdate} />
+      {youtubeURL ? (
+        <YouTubePlayer url={youtubeURL} playbackTime={playbackTime} onPlaybackTimeUpdate={handlePlaybackTimeUpdate} />
+      ) : (
+        <div className="flex items-center justify-center h-[360px] w-full">
+          <h2>Save a YouTube URL in the homepage to see the video appear here 😊</h2>
+        </div>
+      )}
       <Button name="Edit URL" onClick={handleGoBack} />
     </div>
   );
