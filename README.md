@@ -1,4 +1,4 @@
-# YouTube Player App
+# YouTube Player
 
 This is a simple React Typescript App bootstrapped with Vite using Tailwind CSS, React Router and React Hot Toast for styling, navigation and error handling.
 
@@ -15,3 +15,9 @@ This is a simple React Typescript App bootstrapped with Vite using Tailwind CSS,
 - Click on the `edit URL` button to navigate back to the home page and `enter a new URL`
 - Navigate to the GIF page to see a `random GIF` being displayed on your screen
 - Click on the `back to video` button to go back to `resume the video` where you left off
+
+# Deployment
+
+- `Vercel` has been used as the hosting and deployment platform for speed and ease of use
+- Pushing a new commit onto the project's main branch triggers an `automated deployment`
+- Please find here the [`deployed version of the app`](https://you-tube-player-app.vercel.app/)
