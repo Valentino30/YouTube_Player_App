@@ -4,9 +4,11 @@ This is a simple React Typescript App bootstrapped with Vite using Tailwind CSS,
 
 ## Getting Started
 
-- Add the provided `.env` file to the root folder
-- Run the command `yarn` to install all dependencies
+- Add the provided `.env` file to the project root folder
+- Run the command `yarn` to install all the project dependencies
 - Run the command `yarn dev` to launch the web app in development mode
+- Run the command `yarn test` to run the test suite in watch mode
+- Run the command `yarn coverage` to generate a coverage report
 
 ## User Flows
 
