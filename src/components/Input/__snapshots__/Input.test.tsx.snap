@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Input Component > matches the snapshot 1`] = `
+<DocumentFragment>
+  <input
+    class="p-2 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-gray-700 mb-4 bg-gray-800"
+    placeholder="Type here"
+    type="text"
+    value="test"
+  />
+</DocumentFragment>
+`;
